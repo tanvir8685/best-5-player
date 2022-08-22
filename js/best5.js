@@ -38,6 +38,10 @@ function addToOl(element) {
        
        const playerBudgetShowElement=document.getElementById('player-budget-show');
        playerBudgetShowElement.innerText=perPlayerBugetValue*parseFloat(x);
+
+       const managerInputField=document.getElementById('manager-input-field');
+       const managerInputValue=managerInputField.value;
+       
        
        
    
