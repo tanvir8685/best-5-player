@@ -37,21 +37,41 @@ function addToOl(element) {
        
        
        const playerBudgetShowElement=document.getElementById('player-budget-show');
-       playerBudgetShowElement.innerText=perPlayerBugetValue*parseFloat(x);
+       const playerTotalExpense=perPlayerBugetValue*parseFloat(x)
+       playerBudgetShowElement.innerText=playerTotalExpense;
 
-       const managerInputField=document.getElementById('manager-input-field');
-       const managerInputValue=managerInputField.value;
-       console.log(managerInputValue);
+       const totalCalculateBtn=document.getElementById('total-calculate-btn');
+    totalCalculateBtn.addEventListener('click',function(){
+        console.log('its-clicked');
+        const managerInputField=document.getElementById('manager-input-field');
+        const managerInputValueString=managerInputField.value;
+        const managerInputValue=parseFloat(managerInputValueString);
+        console.log(managerInputValue);
+      
+        const coachInputField=document.getElementById('coach-input-field');
+        const coachInputValueString=coachInputField.value;
+        const coachInputValue=parseFloat(coachInputValueString);
+        console.log(coachInputValue);
+
+        const totalExpense=managerInputValue+coachInputValue+playerTotalExpense;
+        console.log(totalExpense);
+        const totalExpenseShow=document.getElementById('total-expense-show');
+        totalExpenseShow.innerText=totalExpense;
      
-       const coachInputField=document.getElementById('coach-input-field');
-       const coachInputValue=coachInputField.value;
-       console.log(coachInputValue);
+    })
+
+
+
+
+    
        
        
    
     })
+    
 
     }
+    
 
 
 
@@ -59,6 +79,3 @@ function addToOl(element) {
 // console.log( document.getElementById('selected-player-number').innerHTML)
 
 
-function y(value)  {
-  ;
-}
