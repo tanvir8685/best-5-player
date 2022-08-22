@@ -20,7 +20,7 @@
                         <div class="card-body text-light bg-dark">
                           <h5 class="card-title">Kaka</h5>
                           <p class="card-text">Goal-150</p>
-                          <button class="btn btn-primary" onclick="addToOl(this)">Select 1</button>
+                          <button class="btn btn-primary" onclick="addToOl(this)">Select </button>
                         </div>
                       </div>
                       <div class="card m-2" style="width: 18rem;">
@@ -28,7 +28,7 @@
                         <div class="card-body text-light bg-dark">
                           <h5 class="card-title">Cristiano Ronaldo</h5>
                           <p class="card-text">Goal-230</p>
-                          <button class="btn btn-primary" onclick="addToOl(this)">Select 2</button>
+                          <button class="btn btn-primary" onclick="addToOl(this)">Select </button>
                         </div>
                       </div>
                       <div class="card m-2" style="width: 18rem;">
@@ -36,7 +36,7 @@
                         <div class="card-body text-light bg-dark">
                           <h5 class="card-title">Marcelo</h5>
                           <p class="card-text">Goal-23</p>
-                          <button class="btn btn-primary" onclick="addToOl(this)">Select 3</button>
+                          <button class="btn btn-primary" onclick="addToOl(this)">Select </button>
                         </div>
                       </div>
                 </div>
@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="row g-2 text-center">
-                <div class="d-flex col-sm-6 col-md-8">
+                <div id="" class="d-flex col-sm-6 col-md-8">
                     <div class="card m-2" style="width: 18rem;">
                         <img src="images/messi.jpg" class="card-img-top" alt="...">
                         <div class="card-body text-light bg-dark">
@@ -77,10 +77,11 @@
                 </div>
                 <div class="col-6 col-md-4 text-light"><h5>Budget</h5>
                     <div class="d-flex mt-3">
-                        <p class="mx-auto">Per Player </p> <input type="text">
+                        <p class="mx-auto">Per Player </p> 
+                        <input type="text" name="" id="per_player_budget">
                     </div>
-                    <button class="mt-3 btn btn-primary fw-bold">Calculate</button>
-                    <p>Player Expenses $<span class="fw-bold">5000</span></p>
+                    <button class="mt-3 btn btn-primary fw-bold" id="per_player_budget_calulate">Calculate</button>
+                    <p>Player Expenses $<span class="fw-bold player-budget-show" id="player-budget-show">0</span></p>
                     <div class="d-flex mt-3">
                         <p class="mx-auto">Manager </p> <input type="text">
                     </div>
