@@ -41,7 +41,11 @@ function addToOl(element) {
 
        const managerInputField=document.getElementById('manager-input-field');
        const managerInputValue=managerInputField.value;
-       
+       console.log(managerInputValue);
+     
+       const coachInputField=document.getElementById('coach-input-field');
+       const coachInputValue=coachInputField.value;
+       console.log(coachInputValue);
        
        
    
