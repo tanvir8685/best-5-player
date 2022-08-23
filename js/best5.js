@@ -5,7 +5,8 @@ function displayPlayer(player) {
     addedPlayers.innerHTML = '';
     for (let i = 0; i < player.length; i++) {
 
-        // console.log(playerArray[i]);
+        if(i<=4){
+             // console.log(playerArray[i]);
         const playerName = playerArray[i];
         // console.log(playerName)
         const li = document.createElement('li');
@@ -13,19 +14,36 @@ function displayPlayer(player) {
             `${playerName}`;
         addedPlayers.appendChild(li)
 
+        }
+        else{
+            alert('Sorry after 5 player we will be not allow to player name in this list   ')
+            continue;
+        }
+
+       
+
     }
 
 
 }
+//////////////// common function/////////////////////
+
+function getValueFromInputField(idname){
+    const InputField=document.getElementById(idname);
+        const InputValueString=InputField.value;
+        const InputValue=parseFloat(InputValueString);
+        return InputValue;
+}
+
+
 function addToOl(element) {
-    // console.log(element.parentNode.children);
-    // console.log(element.parentNode.children[0].innerText)
+    
     const playerName = element.parentNode.children[0].innerText;
     playerArray.push(playerName);
 
-    // console.log(playerArray);
-    // console.log(playerArray.length);
-    document.getElementById('selected-player-number').innerText = playerArray.length;
+    
+    const selectedPlayerNumber= document.getElementById('selected-player-number').innerText = playerArray.length;
+    
     let x = playerArray.length;
     displayPlayer(playerArray);
     
@@ -41,19 +59,16 @@ function addToOl(element) {
        playerBudgetShowElement.innerText=playerTotalExpense;
 
        const totalCalculateBtn=document.getElementById('total-calculate-btn');
-    totalCalculateBtn.addEventListener('click',function(){
-        console.log('its-clicked');
-        const managerInputField=document.getElementById('manager-input-field');
-        const managerInputValueString=managerInputField.value;
-        const managerInputValue=parseFloat(managerInputValueString);
-        console.log(managerInputValue);
+        totalCalculateBtn.addEventListener('click',function(){
+        
+        
+        getValueFromInputField('manager-input-field')
+        getValueFromInputField('coach-input-field')
+        
       
-        const coachInputField=document.getElementById('coach-input-field');
-        const coachInputValueString=coachInputField.value;
-        const coachInputValue=parseFloat(coachInputValueString);
-        console.log(coachInputValue);
+        
 
-        const totalExpense=managerInputValue+coachInputValue+playerTotalExpense;
+        const totalExpense=getValueFromInputField('manager-input-field')+getValueFromInputField('coach-input-field')+playerTotalExpense;
         console.log(totalExpense);
         const totalExpenseShow=document.getElementById('total-expense-show');
         totalExpenseShow.innerText=totalExpense;
