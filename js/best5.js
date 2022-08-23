@@ -47,8 +47,13 @@ function addToOl(element) {
     const playerName = element.parentNode.children[0].innerText;
     playerArray.push(playerName);
 
+    if(playerArray.length<=5){
+        const selectedPlayerNumber= document.getElementById('selected-player-number').innerText = playerArray.length;
+
+    }
+
     
-    const selectedPlayerNumber= document.getElementById('selected-player-number').innerText = playerArray.length;
+    
     
     let x = playerArray.length;
     displayPlayer(playerArray);
