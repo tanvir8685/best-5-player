@@ -1,5 +1,11 @@
 const playerArray = []
 
+
+function disable(x){
+    x.disabled=true;
+    
+}
+
 function displayPlayer(player) {
     const addedPlayers = document.getElementById('added-players');
     addedPlayers.innerHTML = '';
