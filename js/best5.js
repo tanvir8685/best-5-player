@@ -16,11 +16,24 @@ function displayPlayer(player) {
                        // console.log(playerArray[i]);
         const playerName = playerArray[i];
         // console.log(playerName)
-        const li = document.createElement('li');
+       
+        
+            const li = document.createElement('li'); 
         li.innerHTML =
             `${playerName}`;
         addedPlayers.appendChild(li)
+        
+       
+
+        
+        
+        
+       
         }
+        
+
+        
+        
        
 
 
