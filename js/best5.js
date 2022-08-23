@@ -11,27 +11,23 @@ function displayPlayer(player) {
     addedPlayers.innerHTML = '';
     for (let i = 0; i < player.length; i++) {
 
-        if(i<=4){
-             // console.log(playerArray[i]);
+        
+
+                       // console.log(playerArray[i]);
         const playerName = playerArray[i];
         // console.log(playerName)
         const li = document.createElement('li');
         li.innerHTML =
             `${playerName}`;
         addedPlayers.appendChild(li)
-
         }
-        else{
-            alert('Sorry after 5 player we will be not allow to player name in this list   ')
-            continue;
-        }
-
        
+
 
     }
 
 
-}
+
 //////////////// common function/////////////////////
 
 function getValueFromInputField(idname){
@@ -47,10 +43,12 @@ function addToOl(element) {
     const playerName = element.parentNode.children[0].innerText;
     playerArray.push(playerName);
 
-    if(playerArray.length<=5){
+       
         const selectedPlayerNumber= document.getElementById('selected-player-number').innerText = playerArray.length;
+       
+        
 
-    }
+    
 
     
     
@@ -66,8 +64,12 @@ function addToOl(element) {
        
        
        const playerBudgetShowElement=document.getElementById('player-budget-show');
-       const playerTotalExpense=perPlayerBugetValue*parseFloat(x)
+       
+        const playerTotalExpense=perPlayerBugetValue*parseFloat(x)
        playerBudgetShowElement.innerText=playerTotalExpense;
+
+       
+       
 
        const totalCalculateBtn=document.getElementById('total-calculate-btn');
         totalCalculateBtn.addEventListener('click',function(){
@@ -101,7 +103,5 @@ function addToOl(element) {
 
 
 
-// addToOl('selected-player-number');
-// console.log( document.getElementById('selected-player-number').innerHTML)
 
 
